@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cores</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <button type="button" onclick="changeColor('red')">Vermelho</button>
+        <button type="button" onclick="changeColor('green')">Verde</button>
+        <button type="button" onclick="changeColor('blue')">Azul</button>
+        <button type="button" onclick="changeColor('yellow')">Amarelo</button>
+    </form>
+</body>
+</html>

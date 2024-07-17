@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plano de Fundo Cores</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+        function resetColor() {
+            document.body.style.backgroundColor = "";
+        }
+    </script>
+</head>
+<body>
+    <a href="#" onmouseover="changeColor('red')" onmouseout="resetColor()">Vermelho</a>
+    <a href="#" onmouseover="changeColor('green')" onmouseout="resetColor()">Verde</a>
+    <a href="#" onmouseover="changeColor('blue')" onmouseout="resetColor()">Azul</a>
+    <a href="#" onmouseover="changeColor('yellow')" onmouseout="resetColor()">Amarelo</a>
+</body>
+</html>
