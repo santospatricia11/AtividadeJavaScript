@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha a Cor</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Escolha uma cor para o plano de fundo:</h1>
+    <form id="colorForm">
+        <input type="radio" id="red" name="color" value="red">
+        <label for="red">Vermelho</label><br>
+
+        <input type="radio" id="green" name="color" value="green">
+        <label for="green">Verde</label><br>
+
+        <input type="radio" id="blue" name="color" value="blue">
+        <label for="blue">Azul</label><br>
+
+        <input type="radio" id="yellow" name="color" value="yellow">
+        <label for="yellow">Amarelo</label><br>
+    </form>
+
+    <script>
+        function changeBackgroundColor(event) {
+            document.body.style.backgroundColor = event.target.value;
+        }
+
+        const radios = document.querySelectorAll('input[name="color"]');
+        radios.forEach(radio => {
+            radio.addEventListener('change', changeBackgroundColor);
+        });
+    </script>
+</body>
+</html>

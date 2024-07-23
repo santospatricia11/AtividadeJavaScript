@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Checkbox</title>
+    <style>
+        .checkbox-group {
+            margin-bottom: 15px;
+        }
+        #submitButton:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <div class="checkbox-group">
+            <label><input type="checkbox" class="item-checkbox"> Item 1</label><br>
+            <label><input type="checkbox" class="item-checkbox"> Item 2</label><br>
+            <label><input type="checkbox" class="item-checkbox"> Item 3</label><br>
+            <label><input type="checkbox" class="item-checkbox"> Item 4</label><br>
+        </div>
+        <button id="submitButton" disabled>Enviar</button>
+    </form>
+
+    <script>
+        const submitButton = document.getElementById('submitButton');
+        const checkboxes = document.querySelectorAll('.item-checkbox');
+
+        function updateButtonState() {
+            const checkedCount = Array.from(checkboxes).filter(checkbox => checkbox.checked).length;
+            submitButton.disabled = checkedCount < 2;
+        }
+
+        checkboxes.forEach(checkbox => checkbox.addEventListener('change', updateButtonState));
+    </script>
+</body>
+</html>

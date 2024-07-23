@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar/Ocultar Texto</title>
+    <style>
+        #textParagraph {
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <p id="textParagraph">Este é um parágrafo de exemplo que pode ser ocultado ou mostrado.</p>
+    <button id="toggleButton">Ocultar Texto</button>
+
+    <script>
+        const textParagraph = document.getElementById('textParagraph');
+        const toggleButton = document.getElementById('toggleButton');
+
+        function toggleTextVisibility() {
+            if (textParagraph.style.display === 'none') {
+                textParagraph.style.display = 'block';
+                toggleButton.textContent = 'Ocultar Texto';
+            } else {
+                textParagraph.style.display = 'none';
+                toggleButton.textContent = 'Mostrar Texto';
+            }
+        }
+
+        toggleButton.addEventListener('click', toggleTextVisibility);
+    </script>
+</body>
+</html>
